@@ -23,3 +23,8 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 //登録ルート
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+//task2コントローラーへのルート
+Route::get('/tasks', 'TaskController@index');
+Route::post('/task', 'TaskController@store');
+Route::delete('/task/{task}', 'TaskController@destroy');
