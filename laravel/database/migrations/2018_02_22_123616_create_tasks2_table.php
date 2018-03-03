@@ -13,7 +13,7 @@ class CreateTasks2Table extends Migration
      */
     public function up()
     {
-        Schema::create('tasks2', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->index();
             $table->string('name');
@@ -28,6 +28,6 @@ class CreateTasks2Table extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tasks2');
+        Schema::dropIfExists('tasks');
     }
 }
